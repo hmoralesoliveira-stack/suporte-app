@@ -1,0 +1,55 @@
+name: Chamado de Suporte
+description: Abrir um chamado de suporte técnico
+title: "[SUPORTE] "
+labels:
+  - suporte
+  - status:novo
+
+body:
+  - type: input
+    id: solicitante
+    attributes:
+      label: Nome do solicitante
+      placeholder: "Digite seu nome"
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: E-mail para contato
+      placeholder: "exemplo@empresa.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria do problema
+      options:
+        - Acesso
+        - Sistema
+        - Equipamento
+        - Software
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: "Descreva detalhadamente o problema encontrado."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgencia
+    attributes:
+      label: Urgência
+      options:
+        - Baixa
+        - Média
+        - Alta
+    validations:
+      required: true
